@@ -1,0 +1,6 @@
+FROM debian:10
+RUN apt-get update && apt-get dist-upgrade -y && apt-get install -y git python3-dev python3-pip libffi-dev
+RUN git clone https://github.com/veer66/thai2nmt.git
+WORKDIR /thai2nmt
+RUN pip3 install -r requirements.txt
+RUN bash scripts/install_fairseq.sh n
