@@ -12,7 +12,7 @@ git reset --hard 6f6461b
 
 echo "Install fairseq from source"
 
-pip install --editable .
+pip3 install --editable .
 
 cd ..
 
@@ -25,7 +25,7 @@ then
     
     git clone https://github.com/NVIDIA/apex ./apex
     cd apex
-    pip install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" \
+    pip3 install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" \
         --global-option="--deprecated_fused_adam" --global-option="--xentropy" \
         --global-option="--fast_multihead_attn" ./
 
